@@ -21,9 +21,7 @@ app.get("/students", (req, res) => {
   }
 });
 
-app.get("/students", (req, res) => {
-  res.send(students);
-});
+
 
 
 //POST
@@ -34,6 +32,10 @@ app.post("/students", (req, res) => {
   const updateStudents = students.push(newUser)
 
   res.json(updateStudents)
+  
+});
+app.get("/students", (req, res) => {
+  res.send(students);
 });
 
 
